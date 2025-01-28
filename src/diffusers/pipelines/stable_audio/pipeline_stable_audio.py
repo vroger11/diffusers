@@ -404,7 +404,7 @@ class StableAudioPipeline(DiffusionPipeline):
 
         if initial_audio_sampling_rate is not None and initial_audio_sampling_rate != self.vae.sampling_rate:
             raise ValueError(
-                f"`initial_audio_sampling_rate` must be {self.vae.hop_length}' but is `{initial_audio_sampling_rate}`."
+                f"`initial_audio_sampling_rate` must be {self.vae.sampling_rate}' but is `{initial_audio_sampling_rate}`."
                 "Make sure to resample the `initial_audio_waveforms` and to correct the sampling rate. "
             )
 
